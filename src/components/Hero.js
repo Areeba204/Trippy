@@ -1,22 +1,26 @@
 import "./HeroStyles.css";
-import heroImg from "../assets/12.jpg";
 
-function Hero( props  ) {
-    return (
-        <div className={props.cName}>
-            <img src={props.heroImg} alt="Hero Image" />
+function Hero(props) {
+return ( <div className={props.cName}>
+<img
+src={props.heroImg}
+alt={props.title || "Travel destination"}
+/>
 
-            <div className ="hero-text">
-                <h1>{props.title}</h1>
-                <p>{props.text}</p>
-                <a href={props.url} className= {props.btnClass}>
+        <div className="hero-text">
+            <h1>{props.title}</h1>
+            <p>{props.text}</p>
+
+            <a
+                href={props.url}
+                className={props.btnClass}
+            >
                 {props.buttonText}
-                
-                </a>
+            </a>
+        </div>
+    </div>
+);
 
-            </div>
-        </div> 
-    );
 }
 
 export default Hero;
